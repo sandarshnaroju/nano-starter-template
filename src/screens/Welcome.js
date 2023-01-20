@@ -85,6 +85,7 @@ const counterInstructionText = {
   },
   onClick: 'textpress',
 };
+
 const WelcomeScreen = {
   name: 'Welcome',
   screen: {
