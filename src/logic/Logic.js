@@ -1,5 +1,3 @@
-import {cloneDeep} from 'lodash';
-
 export const WelcomeScreenFunctions = {
   continuePress: ({
     navigation,
@@ -21,11 +19,14 @@ export const WelcomeScreenFunctions = {
     completeFlatlistData,
     db,
   }) => {
-    const cloned = cloneDeep(uiElements);
-    cloned['v1'][2]['value'] = uiElements['v1'][2]['value'] + 1;
+    uiElements['v1'][2]['value'] = uiElements['v1'][2]['value'] + 1;
 
-    return cloned;
+    return uiElements;
   },
-  onWelcomeScreenStart: () => {},
-  onWelcomeScreenEnd: () => {},
+  onWelcomeScreenStart: ({navigation, uiElements, db}) => {
+    return uiElements;
+  },
+  onWelcomeScreenEnd: ({navigation, uiElements, db}) => {
+    return uiElements;
+  },
 };
