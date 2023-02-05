@@ -62,32 +62,17 @@ const increaseCountButton = {
       borderRadius: 8,
       backgroundColor: '#0066a7',
     },
-    icon: 'plus',
     mode: 'contained',
     textColor: 'white',
     uppercase: true,
   },
   onClick: 'increaseCountButtonPress',
 };
-const testIcon = {
-  component: NANO.AVATAR_ICON,
-  value: 'thumb-up',
-
-  props: {
-    style: {
-      alignSelf: 'center',
-      marginTop: 20,
-      marginHorizontal: 20,
-    },
-    size: 60,
-  },
-  onClick: 'continuePress',
-};
 
 const WelcomeScreen = {
   name: 'Welcome',
   screen: {
-    v1: [Heading, SubHeading, countText, increaseCountButton, testIcon],
+    v1: [Heading, SubHeading, countText, increaseCountButton],
   },
   logic: WelcomeScreenFunctions,
   style: {flex: 1, justifyContent: 'center'},
