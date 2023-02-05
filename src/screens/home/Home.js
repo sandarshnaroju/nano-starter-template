@@ -1,8 +1,8 @@
-import NANO from 'react-native-nano/Constants';
-import WelcomeScreenFunctions from './WelcomeLogic';
+import {NANO} from 'react-native-nano';
+import HomeScreenFunctions from './HomeLogic';
 const Heading = {
   component: NANO.TEXT,
-  value: 'Welcome to Nano',
+  value: 'Home to Nano',
 
   props: {
     style: {
@@ -60,10 +60,11 @@ const increaseCountButton = {
       marginTop: 20,
       marginHorizontal: 20,
       borderRadius: 8,
+      backgroundColor: '#0066a7',
     },
-    mode: 'elevated',
-    buttonColor: '#0066a7',
+    mode: 'contained',
     textColor: 'white',
+    icon: 'plus',
     uppercase: true,
   },
   onClick: 'increaseCountButtonPress',
@@ -85,9 +86,22 @@ const counterInstructionText = {
   },
   onClick: 'textpress',
 };
+const testIcon = {
+  component: NANO.AVATAR_ICON,
+  value: 'chevron-right',
 
-const WelcomeScreen = {
-  name: 'Welcome',
+  props: {
+    style: {
+      alignSelf: 'center',
+      marginTop: 20,
+      marginHorizontal: 20,
+    },
+  },
+  onClick: 'oncontinuepress',
+};
+
+const HomeScreen = {
+  name: 'Home',
   screen: {
     v1: [
       Heading,
@@ -95,9 +109,10 @@ const WelcomeScreen = {
       countText,
       increaseCountButton,
       counterInstructionText,
+      testIcon,
     ],
   },
-  logic: WelcomeScreenFunctions,
+  logic: HomeScreenFunctions,
   style: {justifyContent: 'center', flex: 1},
 };
-export default WelcomeScreen;
+export default HomeScreen;

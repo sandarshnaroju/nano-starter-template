@@ -1,6 +1,6 @@
 import {cloneDeep} from 'lodash';
 
-const WelcomeScreenFunctions = {
+const HomeScreenFunctions = {
   textpress: (navigation, elements, index, item, completelistData) => {
     console.log('helllooo');
 
@@ -20,6 +20,15 @@ const WelcomeScreenFunctions = {
     cloned['v1'][2]['value'] = elements['v1'][2]['value'] + 1;
     return cloned;
   },
+  oncontinuepress: ({
+    navigation,
+    uiElements,
+    index,
+    item,
+    completeFlatlistData,
+  }) => {
+    return uiElements;
+  },
 };
 
-export default WelcomeScreenFunctions;
+export default HomeScreenFunctions;

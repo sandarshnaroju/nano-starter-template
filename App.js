@@ -7,7 +7,7 @@
 
 import React from 'react';
 
-import RNNano from 'react-native-nano/screen/Screens';
+import {RNNano} from 'react-native-nano';
 import AllScreens from './src/screens';
 import {enableScreens} from 'react-native-screens';
 enableScreens();
