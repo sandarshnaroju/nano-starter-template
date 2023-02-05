@@ -1,6 +1,4 @@
-import HomeScreen from './home/Home';
-
-const {default: WelcomeScreen} = require('./welcome/Welcome');
-const AllScreens = [WelcomeScreen, HomeScreen];
+import WelcomeScreen from './Welcome';
+const AllScreens = [WelcomeScreen];
 
 export default AllScreens;

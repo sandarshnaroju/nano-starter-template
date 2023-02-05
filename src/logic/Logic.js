@@ -1,6 +1,6 @@
 import {cloneDeep} from 'lodash';
 
-const WelcomeScreenFunctions = {
+export const WelcomeScreenFunctions = {
   continuePress: ({
     navigation,
     uiElements,
@@ -9,7 +9,6 @@ const WelcomeScreenFunctions = {
     completeFlatlistData,
     db,
   }) => {
-    // navigation.navigate('');
     console.log('welcome pressed');
 
     return uiElements;
@@ -30,5 +29,3 @@ const WelcomeScreenFunctions = {
   onWelcomeScreenStart: () => {},
   onWelcomeScreenEnd: () => {},
 };
-
-export default WelcomeScreenFunctions;

@@ -1,8 +1,8 @@
 import {NANO} from 'react-native-nano';
-import HomeScreenFunctions from './HomeLogic';
+import {WelcomeScreenFunctions} from '../logic/Logic';
 const Heading = {
   component: NANO.TEXT,
-  value: 'Home to Nano',
+  value: 'Welcome to Nano',
 
   props: {
     style: {
@@ -62,33 +62,16 @@ const increaseCountButton = {
       borderRadius: 8,
       backgroundColor: '#0066a7',
     },
+    icon: 'plus',
     mode: 'contained',
     textColor: 'white',
-    icon: 'plus',
     uppercase: true,
   },
   onClick: 'increaseCountButtonPress',
 };
-const counterInstructionText = {
-  component: NANO.TEXT,
-  value: 'Click the above button to increase the count',
-
-  props: {
-    style: {
-      fontSize: 18,
-
-      alignSelf: 'center',
-      justifyContent: 'center',
-      marginTop: 20,
-      marginHorizontal: 20,
-      textAlign: 'center',
-    },
-  },
-  onClick: 'textpress',
-};
 const testIcon = {
   component: NANO.AVATAR_ICON,
-  value: 'chevron-right',
+  value: 'thumb-up',
 
   props: {
     style: {
@@ -96,23 +79,19 @@ const testIcon = {
       marginTop: 20,
       marginHorizontal: 20,
     },
+    size: 60,
   },
-  onClick: 'oncontinuepress',
+  onClick: 'continuePress',
 };
 
-const HomeScreen = {
-  name: 'Home',
+const WelcomeScreen = {
+  name: 'Welcome',
   screen: {
-    v1: [
-      Heading,
-      SubHeading,
-      countText,
-      increaseCountButton,
-      counterInstructionText,
-      testIcon,
-    ],
+    v1: [Heading, SubHeading, countText, increaseCountButton, testIcon],
   },
-  logic: HomeScreenFunctions,
-  style: {justifyContent: 'center', flex: 1},
+  logic: WelcomeScreenFunctions,
+  style: {flex: 1, justifyContent: 'center'},
+  onStart: 'onWelcomeScreenStart',
+  onEnd: 'onWelcomeScreenEnd',
 };
-export default HomeScreen;
+export default WelcomeScreen;
