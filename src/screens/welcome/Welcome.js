@@ -1,5 +1,5 @@
 import {NANO} from 'react-native-nano';
-import {WelcomeScreenFunctions} from '../logic/Logic';
+import {WelcomeScreenFunctions} from './WelcomeLogic';
 const Heading = {
   component: NANO.TEXT,
   value: 'Welcome to Nano',
