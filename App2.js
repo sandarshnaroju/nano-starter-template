@@ -38,10 +38,7 @@ const button = {
     textColor: 'white',
     buttonColor: 'purple',
   },
-  onClick: ({navigation, uiElements}) => {
-    uiElements['v1'][0].value = uiElements['v1'][0].value + 1;
-    return uiElements;
-  },
+  onClick: 'increase',
 };
 
 const screen = {
@@ -50,7 +47,12 @@ const screen = {
     v1: [text, button],
   },
   style: {justifyContent: 'center', flex: 1, backgroundColor: 'white'},
-  logic: null,
+  logic: {
+    increase: ({navigation, uiElements}) => {
+      uiElements['v1'][0].value = uiElements['v1'][0].value + 1;
+      return uiElements;
+    },
+  },
 };
 
 const AllScreens = [screen];
