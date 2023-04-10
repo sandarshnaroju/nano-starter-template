@@ -8,10 +8,9 @@ const newTable = {
 };
 
 export const DataBaseConfig = {
- // schema: [newTable],
- // schemaVersion: 3,
+  // schema: [newTable],
+  // schemaVersion: 3,
 };
 export const CLIENT_ID = 'client-Id';
-export const CLIENT_SECRET =
-  'Client-secret';
+export const CLIENT_SECRET = 'Client-secret';
 export const APP_URL = 'app url';
