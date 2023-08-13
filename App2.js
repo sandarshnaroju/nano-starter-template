@@ -13,6 +13,7 @@ enableScreens();
 const text = {
   component: 'text',
   value: 1,
+  name: 'count',
   animation: {
     animation: 'bounce',
   },
@@ -38,7 +39,11 @@ const button = {
     textColor: 'white',
     buttonColor: 'purple',
   },
-  onClick: 'increase',
+  onPress: ({setUi, getUi}) => {
+    const textObj = getUi('count');
+    textObj.value = textObj.value + 1;
+    setUi('count', textObj);
+  },
 };
 
 const screen = {
@@ -47,12 +52,6 @@ const screen = {
     v1: [text, button],
   },
   style: {justifyContent: 'center', flex: 1, backgroundColor: 'white'},
-  logic: {
-    increase: ({navigation, uiElements}) => {
-      uiElements['v1'][0].value = uiElements['v1'][0].value + 1;
-      return uiElements;
-    },
-  },
 };
 
 const AllScreens = [screen];
@@ -61,3 +60,4 @@ const App = () => {
 };
 
 export default App;
+

@@ -35,6 +35,7 @@ const SubHeading = {
 const countText = {
   component: NANO.TEXT,
   value: 1,
+  name: 'counterText',
 
   props: {
     style: {

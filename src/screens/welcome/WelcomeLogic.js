@@ -8,8 +8,6 @@ export const WelcomeScreenFunctions = {
     db,
   }) => {
     console.log('welcome pressed');
-
-    return uiElements;
   },
   increaseCountButtonPress: ({
     navigation,
@@ -18,15 +16,13 @@ export const WelcomeScreenFunctions = {
     item,
     completeFlatlistData,
     db,
+    getUi,
+    setUi,
   }) => {
-    uiElements['v1'][2]['value'] = uiElements['v1'][2]['value'] + 1;
-
-    return uiElements;
+    const counterText = getUi('counterText');
+    counterText['value'] = counterText['value'] + 1;
+    setUi('counterText', counterText);
   },
-  onWelcomeScreenStart: ({navigation, uiElements, db}) => {
-    return uiElements;
-  },
-  onWelcomeScreenEnd: ({navigation, uiElements, db}) => {
-    return uiElements;
-  },
+  onWelcomeScreenStart: ({navigation, uiElements, db}) => {},
+  onWelcomeScreenEnd: ({navigation, uiElements, db}) => {},
 };
