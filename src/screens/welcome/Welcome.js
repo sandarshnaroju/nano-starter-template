@@ -13,7 +13,7 @@ const Heading = {
       fontWeight: 'bold',
     },
   },
-  onClick: 'textpress',
+  onPress: 'textpress',
 };
 const SubHeading = {
   component: NANO.TEXT,
@@ -30,7 +30,7 @@ const SubHeading = {
       textAlign: 'center',
     },
   },
-  onClick: 'textpress',
+  onPress: 'textpress',
 };
 const countText = {
   component: NANO.TEXT,
@@ -49,7 +49,7 @@ const countText = {
       fontWeight: 'bold',
     },
   },
-  onClick: 'textpress',
+  onPress: 'textpress',
 };
 const increaseCountButton = {
   component: NANO.BUTTON,
@@ -67,7 +67,7 @@ const increaseCountButton = {
     textColor: 'white',
     uppercase: true,
   },
-  onClick: 'increaseCountButtonPress',
+  onPress: 'increaseCountButtonPress',
 };
 
 const WelcomeScreen = {
