@@ -9,10 +9,17 @@ import React from 'react';
 
 import {RNNano} from 'react-native-nano';
 import {enableScreens} from 'react-native-screens';
+import {init} from 'rn-nano-sync';
 enableScreens();
 
 const App = () => {
-  return <RNNano />;
+  return (
+    <RNNano
+      appStart={({moduleParams}) => {
+        init(moduleParams['navigation']);
+      }}
+    />
+  );
 };
 
 export default App;
