@@ -7,7 +7,7 @@
 
 import React from 'react';
 
-import {RNNano} from 'react-native-nano';
+import {NanoApp} from 'react-native-nano';
 import {enableScreens} from 'react-native-screens';
 enableScreens();
 const text = {
@@ -56,7 +56,7 @@ const screen = {
 
 const AllScreens = [screen];
 const App = () => {
-  return <RNNano screens={AllScreens} />;
+  return <NanoApp screens={AllScreens} />;
 };
 
 export default App;
